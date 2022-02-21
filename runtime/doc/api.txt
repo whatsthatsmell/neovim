@@ -1543,6 +1543,9 @@ nvim_set_current_win({window})                        *nvim_set_current_win()*
 nvim_set_hl({ns_id}, {name}, {*val})                           *nvim_set_hl()*
                 Set a highlight group.
 
+                Note: unlike the `:highlight` command which can update a highlight group, this function
+                completely replaces the definition. For example: nvim_set_hl(0, 'Visual , {}) will clear the highlight group 'Visual .
+
                 Parameters: ~
                     {ns_id}  number of namespace for this highlight. Use value
                              0 to set a highlight group in the global (
